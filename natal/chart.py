@@ -36,6 +36,7 @@ class Chart(DotDict):
         width: int,
         height: int | None = None,
         data2: Data | None = None,
+        lang: str = "en",
     ) -> None:
         """Initialize a Chart object.
 
@@ -44,6 +45,7 @@ class Chart(DotDict):
             width: Width of the SVG
             height: Height of the SVG. If None, set to width
             data2: Secondary chart data for composite charts
+            lang: Language for the chart text (ru, en, ko, es).
 
         Returns:
             None
@@ -52,6 +54,7 @@ class Chart(DotDict):
         self.data2 = data2
         self.width = width
         self.height = height
+        self.lang = lang
         if self.height is None:
             self.height = self.width
         self.cx = self.width / 2
