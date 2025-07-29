@@ -65,4 +65,3 @@ venv.bak/
 # mkdocs output
 site/
 .aider*
-.idea
